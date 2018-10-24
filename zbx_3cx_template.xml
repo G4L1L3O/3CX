@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.4</version>
+    <date>2018-10-23T18:02:25Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>3CX PBX Debian Linux</template>
+            <name>3CX PBX Debian Linux</name>
+            <description>3CX PBX Template (https://www.3cx.com) monitors services are running. Do NOT put checks which are not unique to 3CX in this template.</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>3cxpbx</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>3CX HTTP PBX WebUI</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>net.tcp.service[http,,{$3CXHTTPWEBUI}]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>5000/tcp for HTTP WebUI. Ideally you would be using HTTPS to connect to the other one for securitry reasons of course.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>3cxpbx</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>3CX HTTPS PBX WebUI</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>net.tcp.service[https,,{$3CXHTTPSWEBUI}]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>This checks the HTTPS WebUI is running on the 5001/tcp port. For checking you can actually browse to it, that would be a web scenario</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>3cxpbx</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>3CX PBX TCP SIP Port</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>net.tcp.service[tcp,,5060]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>5060/TCP is used for SIP connections. VOIP PBXs use this</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>3cxpbx</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>3CX UDP Tunnel Service</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>net.tcp.service[tcp,,5090]</key>
+                    <delay>30s</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>UDP/5090 is used by 3CX Tunnel Broker so we need to monitor that</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>3cxpbx</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <httptests>
+                <httptest>
+                    <name>3CX HTTPS PBX WebUI Availability</name>
+                    <application/>
+                    <delay>1m</delay>
+                    <attempts>1</attempts>
+                    <agent>Links (2.8; Linux 3.13.0-36-generic x86_64; GNU C 4.8.2; text)</agent>
+                    <http_proxy/>
+                    <variables/>
+                    <headers/>
+                    <status>0</status>
+                    <authentication>0</authentication>
+                    <http_user/>
+                    <http_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <steps>
+                        <step>
+                            <name>{HOST.CONN} HTTPS Management Console</name>
+                            <url>https://{HOST.CONN}:5001/#/login</url>
+                            <query_fields/>
+                            <posts/>
+                            <variables/>
+                            <headers/>
+                            <follow_redirects>1</follow_redirects>
+                            <retrieve_mode>0</retrieve_mode>
+                            <timeout>15s</timeout>
+                            <required>3CX Phone System Management Console</required>
+                            <status_codes>200</status_codes>
+                        </step>
+                    </steps>
+                </httptest>
+            </httptests>
+            <macros>
+                <macro>
+                    <macro>{$3CXHTTPSWEBUI}</macro>
+                    <value>5001</value>
+                </macro>
+                <macro>
+                    <macro>{$3CXHTTPWEBUI}</macro>
+                    <value>5000</value>
+                </macro>
+            </macros>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{3CX PBX Debian Linux:net.tcp.service[tcp,,5090].last(0)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{HOST.NAME} has no 3CX Tunnel on UDP/5090</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>if port UDP/5090 is not open then we're not able create a 3CX Tunnel and that's not good</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{3CX PBX Debian Linux:net.tcp.service[https,,{$3CXHTTPSWEBUI}].last(0)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{HOST.NAME} has no HTTPS WebUI on TCP/{$3CXHTTPSWEBUI}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>if port 5060/TCP is not open then we're not able to accept SIP so no PBX</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{3CX PBX Debian Linux:net.tcp.service[http,,{$3CXHTTPWEBUI}].last(0)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{HOST.NAME} has no HTTP WebUI on TCP/{$3CXHTTPWEBUI}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>if port 5060/TCP is not open then we're not able to accept SIP so no PBX</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{3CX PBX Debian Linux:net.tcp.service[tcp,,5060].last(0)}=0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>{HOST.NAME} has no SIP Listener on TCP/5060</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>if port TCP/5060 is not open then we're not able to accept SIP so no PBX</description>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+</zabbix_export>
