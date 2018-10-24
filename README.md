@@ -1,8 +1,12 @@
 # 3CX
+
 3CX Template Simple Monitoring
+
 Zabbix Templates
+
 About
-This repo contains scripts and templates for a zabbix 3.x zabbix server to do various checks on devics
+
+This repo contains scripts and templates for a zabbix 3.x zabbix server to do various checks on devices
 
 Usage
 
